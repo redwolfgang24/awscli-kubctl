@@ -7,7 +7,7 @@ matrix:
       dist: trusty
 
 before_script:
-  - docker login --username=$DOCKER_USERNAME --password=DOCKER_PASSWORD hub.docker.com
+  - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD hub.docker.com
 
 jobs:
   include:
