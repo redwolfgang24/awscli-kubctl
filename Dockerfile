@@ -4,7 +4,7 @@ MAINTAINER Larry Borrero <redwolfgang20@gmail.com>
 RUN apt-get -y update
 RUN apt-get -y install curl
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
-RUN python3 get-pip.py --user
+RUN python get-pip.py --user
 RUN export PATH=~/.local/bin:$PATH
 RUN source ~/.bash_profile
 RUN source ~/.bashrc
