@@ -1,0 +1,18 @@
+services:
+  - docker
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+
+before_script:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+jobs:
+  include:
+    - stage: latest
+      script:
+        - docker build -t redwolfgang20/awscli-kubctl:latest .
+        - docker tag redwolfgang20/awscli-kubctl:latest redwolfgang20/awscli-kubctl:latest
+        - docker push redwolfgang20/awscli-kubctl
