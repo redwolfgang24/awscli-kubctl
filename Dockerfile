@@ -2,6 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Larry Borrero <redwolfgang20@gmail.com>
 
 RUN apt-get -y update
+RUN apt-get -y install python3 python3-pip
 RUN pip3 install awscli --upgrade --user
 RUN apt-get -y install curl
 
