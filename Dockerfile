@@ -11,5 +11,8 @@ RUN chmod +x ./kubectl
 RUN mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
 RUN echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 
+RUN apt-get install nodejs
+RUN apt-get install npm
+
 # Set Default Behavior
 ENTRYPOINT ["aws"]
